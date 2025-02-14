@@ -1,0 +1,49 @@
+## .NET Core
+bin/
+obj/
+
+## ASP.NET Core
+wwwroot/
+
+## User-specific files
+.vs/
+.idea/
+.vscode/
+
+## OS-generated files
+.DS_Store
+Thumbs.db
+
+## Node modules (falls verwendet)
+node_modules/
+
+## NPM logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+## Logs
+*.log
+
+## .NET Core secrets
+secrets/
+
+## Build results
+publish/
+
+## Docker
+docker-compose.override.yml
+*.env
+
+## JetBrains Rider files
+.idea/
+
+## User-specific Visual Studio files
+.vs2019/
+.vs2017/
+
+## Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
