@@ -1,0 +1,6 @@
+@BoltApi_HostAddress = http://localhost:5252
+
+GET {{BoltApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
