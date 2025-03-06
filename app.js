@@ -1,76 +1,128 @@
-document.getElementById("registerForm").addEventListener("submit", async function(event) {
-    event.preventDefault();
+const apiUrl = "https://localhost:7102/api/user";  // Verwendet HTTPS
 
-    const username = document.getElementById("username").value;
+ // Setze die API URL auf den richtigen Wert
 
-    if (username) {
-        // Benutzer-Objekt
-        const user = {
-            username: username,
-            balance: 1000 // Der Standardbetrag wird direkt gesetzt
-        };
+let loggedInUserId = localStorage.getItem("userId");  // Hole die Benutzer-ID aus localStorage, falls vorhanden
+let loggedInUsername = localStorage.getItem("username");  // Hole den Benutzernamen aus localStorage, falls vorhanden
 
-        try {
-            const response = await fetch("https://localhost:7015/api/User/register", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(user)
-            });
+// Überprüfen, ob der Benutzer bereits eingeloggt ist (localStorage)
+if (loggedInUserId !== null) {
+    document.getElementById("userInfo").style.display = "block";
+    document.getElementById("userDetails").innerHTML = `ID: ${loggedInUserId}, Benutzername: ${loggedInUsername}`;
+    getUserBalance();  // Zeige den Kontostand an, wenn der Benutzer eingeloggt ist
+}
 
-            if (response.ok) {
-                const result = await response.json();
-                alert(`Benutzer registriert: ${result.username} mit ID: ${result.id}`);
-                // Kontostand anzeigen
-                document.getElementById("balanceAmount").textContent = `${result.balance} CHF`;
-            } else {
-                const errorData = await response.json();
-                alert(errorData);
-            }
-        } catch (error) {
-            alert("Fehler bei der Registrierung.");
-        }
+// Registrieren eines Benutzers
+async function registerUser() {
+    const username = document.getElementById("registerUsername").value;
+    const password = document.getElementById("registerPassword").value;
+
+    const response = await fetch(`${apiUrl}/register`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ username, password })
+    });
+
+    if (response.ok) {
+        alert("Benutzer erfolgreich registriert!");
     } else {
-        alert("Bitte Benutzername eingeben.");
+        const error = await response.text();
+        alert(`Fehler: ${error}`);
     }
-});
+}
 
-document.getElementById("transferForm").addEventListener("submit", async function(event) {
-    event.preventDefault();
+async function loginUser() {
+    const username = document.getElementById("loginUsername").value;
+    const password = document.getElementById("loginPassword").value;
 
-    const amount = document.getElementById("amount").value;
-    const recipientId = document.getElementById("recipient").value;
-    const message = document.getElementById("message").value;
+    const response = await fetch(`${apiUrl}/login`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ username, password })
+    });
 
-    if (amount && recipientId) {
-        // Transfer-Request-Objekt
-        const transferRequest = {
-            senderId: 1, // Dies wird normalerweise vom eingeloggten Benutzer genommen
-            receiverId: recipientId,
-            amount: parseFloat(amount),
-            message: message // Nachricht hinzufügen
-        };
-
-        try {
-            const response = await fetch("https://localhost:7015/api/User/transfer", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(transferRequest)
-            });
-
-            if (response.ok) {
-                alert("Überweisung erfolgreich.");
-            } else {
-                const errorData = await response.json();
-                alert(errorData);
-            }
-        } catch (error) {
-            alert("Fehler bei der Überweisung.");
-        }
+    if (response.ok) {
+        const data = await response.json();
+        loggedInUserId = data.id;  // Benutzer-ID speichern
+        loggedInUsername = data.username;  // Benutzername speichern
+        localStorage.setItem("userId", data.id);  // Speichern der ID im localStorage
+        localStorage.setItem("username", data.username);  // Speichern des Benutzernamens
+        document.getElementById("userInfo").style.display = "block";
+        document.getElementById("userDetails").innerHTML = `ID: ${data.id}, Benutzername: ${data.username}`;
+        getUserBalance();  // Zeige den Kontostand an
     } else {
-        alert("Bitte Betrag und Empfänger-ID eingeben.");
+        const error = await response.text();
+        alert(`Fehler: ${error}`);
     }
-});
+}
+
+
+// Benutzer suchen (nach ID oder Username)
+async function searchUser() {
+    const query = prompt("Geben Sie den Benutzernamen oder die ID ein:");
+    const response = await fetch(`${apiUrl}/search?query=${query}`);
+
+    if (response.ok) {
+        const users = await response.json();
+        alert("Benutzer gefunden: " + users.map(user => user.username).join(", "));
+    } else {
+        alert("Benutzer nicht gefunden.");
+    }
+}
+
+// Kontostand des Benutzers anzeigen
+async function getUserBalance() {
+    const response = await fetch(`${apiUrl}/${loggedInUserId}`);
+    if (response.ok) {
+        const user = await response.json();
+        document.getElementById("userBalance").innerHTML = `Kontostand: ${user.balance} €`;
+    } else {
+        alert("Fehler beim Abrufen des Kontostands.");
+    }
+}
+
+// Geldüberweisung
+async function transferMoney() {
+    if (loggedInUserId === null) {
+        alert("Bitte melden Sie sich zuerst an.");
+        return;
+    }
+
+    const receiverQuery = document.getElementById("receiverInput").value; // Benutzername oder ID des Empfängers
+    const amount = document.getElementById("transferAmount").value;
+
+    // Überprüfen, ob der Empfänger eine ID oder ein Username ist
+    let receiverId = null;
+    const response = await fetch(`${apiUrl}/search?query=${receiverQuery}`);
+
+    if (response.ok) {
+        const users = await response.json();
+        if (users.length > 0) {
+            // Prüfen, ob es einen Benutzer mit diesem Namen oder dieser ID gibt
+            receiverId = users[0].id;
+        } else {
+            alert("Empfänger nicht gefunden.");
+            return;
+        }
+    }
+
+    const transferResponse = await fetch(`${apiUrl}/transfer`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ senderId: loggedInUserId, receiverId: receiverId, amount: parseFloat(amount) })
+    });
+
+    if (transferResponse.ok) {
+        alert("Überweisung erfolgreich.");
+        getUserBalance();  // Kontostand nach der Überweisung aktualisieren
+    } else {
+        const error = await transferResponse.text();
+        alert(`Fehler: ${error}`);
+    }
+}

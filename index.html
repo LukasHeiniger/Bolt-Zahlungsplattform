@@ -3,54 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bolt Zahlungsplattform</title>
+    <title>BoltAPI - Benutzerverwaltung</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Bolt Zahlungsplattform</h1>
-        </header>
 
-        <!-- Benutzer Registrierung -->
-        <section id="register">
-            <h2>Benutzer Registrieren</h2>
-            <form id="registerForm">
-                <label for="username">Benutzername:</label>
-                <input type="text" id="username" required>
+    <!-- Benutzerinfos -->
+    <div id="userInfo" style="display: none;">
+        <h3>Willkommen, <span id="userDetails"></span></h3>
+        <p id="userBalance"></p>
+        <button onclick="searchUser()">Benutzer suchen</button>
+    </div>
 
-                <button type="submit">Registrieren</button>
-            </form>
-        </section>
+    <!-- Login-Formular -->
+    <div id="loginForm">
+        <h2>Login</h2>
+        <input type="text" id="loginUsername" placeholder="Benutzername" />
+        <input type="password" id="loginPassword" placeholder="Passwort" />
+        <button onclick="loginUser()">Login</button>
+    </div>
 
-        <!-- Kontostand Anzeige -->
-        <section id="accountBalance">
-            <h2>Kontostand</h2>
-            <div id="balance">
-                <span id="balanceAmount">0 CHF</span>
-            </div>
-        </section>
+    <!-- Registrierungsformular -->
+    <div id="registerForm">
+        <h2>Registrieren</h2>
+        <input type="text" id="registerUsername" placeholder="Benutzername" />
+        <input type="password" id="registerPassword" placeholder="Passwort" />
+        <button onclick="registerUser()">Registrieren</button>
+    </div>
 
-        <!-- Geldüberweisung -->
-        <section id="transfer">
-            <h2>Geld Überweisen</h2>
-            <form id="transferForm">
-                <label for="amount">Betrag:</label>
-                <input type="number" id="amount" required>
-
-                <label for="recipient">Empfänger-ID:</label>
-                <input type="number" id="recipient" required>
-
-                <label for="message">Nachricht (optional):</label>
-                <textarea id="message"></textarea>
-
-                <button type="submit">Überweisen</button>
-            </form>
-        </section>
-
-        <footer>
-            <p>&copy; 2025 Bolt Zahlungsplattform</p>
-        </footer>
+    <!-- Überweisungsformular -->
+    <div id="transferForm">
+        <h2>Geld überweisen</h2>
+        <input type="text" id="receiverInput" placeholder="Benutzername oder ID des Empfängers" />
+        <input type="number" id="transferAmount" placeholder="Betrag" />
+        <button onclick="transferMoney()">Überweisen</button>
     </div>
 
     <script src="app.js"></script>
