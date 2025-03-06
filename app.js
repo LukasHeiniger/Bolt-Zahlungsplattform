@@ -1,40 +1,76 @@
-document.getElementById("transferForm").addEventListener("submit", function(event) {
+document.getElementById("registerForm").addEventListener("submit", async function(event) {
     event.preventDefault();
-    
+
+    const username = document.getElementById("username").value;
+
+    if (username) {
+        // Benutzer-Objekt
+        const user = {
+            username: username,
+            balance: 1000 // Der Standardbetrag wird direkt gesetzt
+        };
+
+        try {
+            const response = await fetch("https://localhost:7015/api/User/register", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(user)
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+                alert(`Benutzer registriert: ${result.username} mit ID: ${result.id}`);
+                // Kontostand anzeigen
+                document.getElementById("balanceAmount").textContent = `${result.balance} CHF`;
+            } else {
+                const errorData = await response.json();
+                alert(errorData);
+            }
+        } catch (error) {
+            alert("Fehler bei der Registrierung.");
+        }
+    } else {
+        alert("Bitte Benutzername eingeben.");
+    }
+});
+
+document.getElementById("transferForm").addEventListener("submit", async function(event) {
+    event.preventDefault();
+
     const amount = document.getElementById("amount").value;
-    const recipient = document.getElementById("recipient").value;
+    const recipientId = document.getElementById("recipient").value;
+    const message = document.getElementById("message").value;
 
-    if(amount && recipient) {
-        // Beispielhafte Transaktionslogik
-        alert(`Überweisung von ${amount} CHF an ${recipient} wurde initiiert.`);
+    if (amount && recipientId) {
+        // Transfer-Request-Objekt
+        const transferRequest = {
+            senderId: 1, // Dies wird normalerweise vom eingeloggten Benutzer genommen
+            receiverId: recipientId,
+            amount: parseFloat(amount),
+            message: message // Nachricht hinzufügen
+        };
 
-        // Beispiel: Kontostand nach der Überweisung anpassen
-        const currentBalance = 0; // Dieser Wert wird später dynamisch aus der Datenbank geladen
-        const newBalance = currentBalance - amount;
-        document.getElementById("balanceAmount").textContent = `${newBalance} CHF`;
+        try {
+            const response = await fetch("https://localhost:7015/api/User/transfer", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(transferRequest)
+            });
 
-        // Beispielhafte Transaktionshistorie (wird später dynamisch hinzugefügt)
-        addTransaction(amount, recipient);
+            if (response.ok) {
+                alert("Überweisung erfolgreich.");
+            } else {
+                const errorData = await response.json();
+                alert(errorData);
+            }
+        } catch (error) {
+            alert("Fehler bei der Überweisung.");
+        }
     } else {
-        alert("Bitte fülle alle Felder aus.");
+        alert("Bitte Betrag und Empfänger-ID eingeben.");
     }
 });
-
-document.getElementById("historyBtn").addEventListener("click", function() {
-    const historySection = document.getElementById("transactionHistory");
-    const isVisible = !historySection.classList.contains("hidden");
-
-    // History anzeigen oder ausblenden
-    if (isVisible) {
-        historySection.classList.add("hidden");
-    } else {
-        historySection.classList.remove("hidden");
-    }
-});
-
-function addTransaction(amount, recipient) {
-    const historyList = document.getElementById("historyList");
-    const newTransaction = document.createElement("li");
-    newTransaction.textContent = `Überweisung von ${amount} CHF an ${recipient}`;
-    historyList.appendChild(newTransaction);
-}

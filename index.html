@@ -3,55 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOLT - Geld Überweisen</title>
+    <title>Bolt Zahlungsplattform</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>BOLT - Geld Überweisen</h1>
-            <p>Überweise Geld an Freunde und Familie in wenigen Schritten</p>
+            <h1>Bolt Zahlungsplattform</h1>
         </header>
 
-        <main>
-            <section id="accountBalance">
-                <h2>Kontostand</h2>
-                <div id="balance">
-                    <span id="balanceAmount">0 CHF</span>
-                </div>
-            </section>
+        <!-- Benutzer Registrierung -->
+        <section id="register">
+            <h2>Benutzer Registrieren</h2>
+            <form id="registerForm">
+                <label for="username">Benutzername:</label>
+                <input type="text" id="username" required>
 
-            <section id="transfer">
-                <h2>Geld Überweisen</h2>
-                <form id="transferForm">
-                    <label for="amount">Betrag:</label>
-                    <input type="number" id="amount" required>
+                <button type="submit">Registrieren</button>
+            </form>
+        </section>
 
-                    <label for="recipient">Empfänger:</label>
-                    <input type="text" id="recipient" required>
+        <!-- Kontostand Anzeige -->
+        <section id="accountBalance">
+            <h2>Kontostand</h2>
+            <div id="balance">
+                <span id="balanceAmount">0 CHF</span>
+            </div>
+        </section>
 
-                    <button type="submit">Überweisen</button>
-                </form>
+        <!-- Geldüberweisung -->
+        <section id="transfer">
+            <h2>Geld Überweisen</h2>
+            <form id="transferForm">
+                <label for="amount">Betrag:</label>
+                <input type="number" id="amount" required>
 
-                
-                <button id="historyBtn">Transaktionshistorie anzeigen</button>
-            </section>
+                <label for="recipient">Empfänger-ID:</label>
+                <input type="number" id="recipient" required>
 
-          
-            <section id="transactionHistory" class="hidden">
-                <h2>Transaktionshistorie</h2>
-                <ul id="historyList">
-                    
-                    <li>Keine Transaktionen vorhanden.</li>
-                </ul>
-            </section>
-        </main>
+                <label for="message">Nachricht (optional):</label>
+                <textarea id="message"></textarea>
+
+                <button type="submit">Überweisen</button>
+            </form>
+        </section>
 
         <footer>
-            <p>&copy; 2025 BOLT. Alle Rechte vorbehalten.</p>
+            <p>&copy; 2025 Bolt Zahlungsplattform</p>
         </footer>
     </div>
 
-    <script src="js/app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

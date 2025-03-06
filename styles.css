@@ -1,4 +1,4 @@
-
+/* Grundlegendes Layout */
 * {
     margin: 0;
     padding: 0;
@@ -6,138 +6,92 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     color: #333;
-    line-height: 1.6;
 }
 
 .container {
-    max-width: 1200px;
+    width: 80%;
     margin: 0 auto;
-    padding: 20px;
 }
 
-/* Header */
 header {
     text-align: center;
-    background-color: #009688;
-    color: white;
-    padding: 40px 20px;
-    border-radius: 10px;
+    margin: 20px 0;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+h1 {
+    font-size: 2.5em;
+    color: #007BFF;
 }
 
-header p {
-    font-size: 1.2rem;
-}
-
-/* Account Balance */
-#accountBalance {
-    margin-top: 40px;
-    text-align: center;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-#balance {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #28a745;
-}
-
-/* Transfer Section */
-#transfer {
-    margin-top: 40px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
+/* Formulare */
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
 
 label {
-    font-size: 1rem;
+    display: block;
     font-weight: bold;
+    margin-top: 10px;
 }
 
-input {
+input, textarea {
+    width: 100%;
     padding: 10px;
-    font-size: 1rem;
-    border-radius: 5px;
+    margin-top: 5px;
     border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
 }
 
+textarea {
+    height: 100px;
+}
+
+/* Buttons */
 button {
-    padding: 12px;
-    background-color: #009688;
-    color: white;
+    background-color: #28a745;
+    color: #fff;
     border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
+    padding: 10px 15px;
+    font-size: 1em;
+    margin-top: 10px;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 button:hover {
-    background-color: #00796b;
+    background-color: #218838;
 }
 
-/* Footer */
+/* Sektionen */
+section {
+    margin-bottom: 40px;
+}
+
+#accountBalance {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#balanceAmount {
+    font-size: 2em;
+    font-weight: bold;
+    color: #007BFF;
+}
+
 footer {
     text-align: center;
+    padding: 10px 0;
     margin-top: 40px;
-    font-size: 0.9rem;
-    color: #888;
-}
-
-#historyBtn {
-    margin-top: 20px;
-    padding: 12px;
-    background-color: #007bff;
+    background-color: #007BFF;
     color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-#historyBtn:hover {
-    background-color: #0056b3;
-}
-
-/* Transaktionshistorie */
-#transactionHistory {
-    margin-top: 40px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.hidden {
-    display: none;
-}
-
-#historyList {
-    list-style-type: none;
-}
-
-#historyList li {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-#historyList li:last-child {
-    border-bottom: none;
 }
