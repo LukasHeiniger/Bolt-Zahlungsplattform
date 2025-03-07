@@ -33,15 +33,21 @@ Ich erstelle eine fiktive Zahlungsplattform wie Twint. Inhalt ist eine Frontend,
 
 | TC-№ | Ausgangslage                                                  | Eingabe                                         | Erwartete Ausgabe                                                                                           |
 | ---- | ------------------------------------------------------------- | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| 1.1  | Benutzer besucht die Startseite                               | Startseite laden                                | Die Startseite zeigt eine Übersicht aller wichtigen Inhalte in einem ansprechenden Layout                   |
-| 1.2  | Benutzer öffnet das Portfolio                                 | Portfolio-Seite öffnen                          | Eine Übersicht aller Projekte wird angezeigt, inkl. Design und Layout gemäß den definierten Spezifikationen |
-| 1.3  | Portfolio-Seite ist geladen                                   | Ein Projekt auswählen                           | Detailseite des Projekts wird geöffnet und zeigt Projektbeschreibung und statische Inhalte                  |
-| 1.4  | Benutzer verwendet verschiedene Bildschirmgrößen              | Fenstergröße ändern                             | Layout passt sich dynamisch an, alle Inhalte bleiben gut lesbar                                             |
-| 1.5  | Benutzer füllt das Kontaktformular aus                        | Kontaktformular ausfüllen und absenden          | Formular wird abgesendet, und E-Mail-Link oder Nachricht wird generiert                                     |
-| 1.6  | Benutzer sucht nach einem bestimmten Projekt                  | Suchfunktion nutzen, z. B. Projektname eingeben | Suchergebnisse filtern die Projekte, und relevante Projekte werden angezeigt                                |
-| 1.7  | Benutzer verwendet die Filteroptionen auf der Portfolio-Seite | Filteroption (z. B. Kategorie) auswählen        | Projekte werden gemäß der gewählten Filterkategorie gefiltert und angezeigt                                 |
-| 1.8  | Benutzer wählt zwischen hellem und dunklem Modus              | Umschaltfunktion für Modus aktivieren           | Die Website wechselt zum ausgewählten Modus, und Farben passen sich dem gewählten Modus an                  |
-| 1.9  | Benutzer navigiert durch die Seiten oder Abschnitte           | Seite oder Abschnitt wechseln                   | Animierte Übergänge zwischen den Seiten oder Abschnitten sind sichtbar und verbessern die Benutzererfahrung |
+| 1    | Der Benutzer hat noch kein Konto.                              | Benutzer gibt korrekte Daten für Registrierung ein. | Benutzer wird erfolgreich registriert und auf die Anmeldeseite weitergeleitet.                              |
+| 2    | Der Benutzer hat ein Konto.                                    | Benutzer gibt gültige Anmeldedaten ein.         | Benutzer wird erfolgreich angemeldet und auf das Dashboard weitergeleitet.                                  |
+| 3    | Der Benutzer hat sein Passwort vergessen.                      | Benutzer fordert Passwort zurücksetzen an und gibt seine E-Mail-Adresse ein. | Benutzer erhält eine E-Mail mit einem Link zur Passwortzurücksetzung.                                        |
+| 4    | Der Benutzer ist angemeldet und möchte einen anderen Benutzer finden. | Benutzer gibt den Namen des anderen Benutzers ein. | Der andere Benutzer wird erfolgreich gefunden und angezeigt.                                               |
+| 5    | Der Benutzer ist angemeldet und möchte eine Zahlung tätigen.   | Benutzer gibt den Betrag und den Empfänger an.   | Der Betrag wird erfolgreich an den Empfänger überwiesen und der Transaktionsstatus wird angezeigt.          |
+| 6    | Der Benutzer hat mehrere Transaktionen durchgeführt.           | Benutzer fordert die Anzeige seiner Transaktionshistorie an. | Die Transaktionshistorie wird korrekt angezeigt, einschließlich aller vergangenen Überweisungen.            |
+| 7    | Der Benutzer öffnet die Anwendung.                             | Keine Eingabe.                                  | Die Benutzeroberfläche lädt und ist einfach und intuitiv zu bedienen.                                       |
+| 8    | Der Benutzer führt eine Transaktion durch.                     | Benutzer fügt eine Notiz zur Transaktion hinzu.   | Die Transaktion wird erfolgreich abgeschlossen und die Notiz wird angezeigt.                               |
+| 9    | Der Entwickler hat eine API erstellt.                          | Das Frontend sendet eine Anfrage an die API.     | Die API gibt eine korrekte Antwort zurück und ermöglicht die Kommunikation zwischen Frontend und Backend.    |
+| 10   | Der Benutzer registriert sich und gibt ein unsicheres Passwort ein. | Benutzer gibt ein unsicheres Passwort ein.       | Das System gibt eine Fehlermeldung aus, dass das Passwort nicht sicher genug ist.                          |
+| 11   | Der Benutzer hat Daten und Transaktionen, die gespeichert werden müssen. | Daten werden in die Datenbank eingegeben.        | Die Benutzerdaten und Transaktionen werden korrekt in der Datenbank gespeichert.                             |
+| 12   | Der Entwickler hat Tests für die Funktionen registrieren und Geld senden geschrieben. | Testfälle für Registrierung und Geld senden.     | Alle Tests bestehen, und die Funktionen funktionieren wie erwartet.                                         |
+| 13   | Die Anwendung wird von vielen Benutzern gleichzeitig genutzt.  | Viele Benutzer tätigen gleichzeitig Transaktionen. | Die Anwendung bleibt stabil und langsam wird sie nicht.                                                     |
+| 14   | Der Benutzer möchte sich anmelden.                             | Benutzer gibt falsche Anmeldedaten ein.          | Das System gibt eine Fehlermeldung aus, dass die Anmeldedaten ungültig sind.                                |
+
 
 ## 2 Planen
 
@@ -56,7 +62,7 @@ Ich erstelle eine fiktive Zahlungsplattform wie Twint. Inhalt ist eine Frontend,
 | 7    | -     | Lukas     | Benutzeroberfläche: Gestaltung einer einfachen und intuitiven Benutzeroberfläche, um eine benutzerfreundliche Anwendung zu gewährleisten.  | 60 Minuten    |
 | 8    | -     | Lukas     | Notizfunktion für Transaktionen: Implementierung der Möglichkeit, Transaktionen mit einer Notiz zu versehen, um den Überweisungsgrund anzugeben. | 60 Minuten    |
 | 9    | -     | Lukas     | API-Entwicklung: Erstellung einer API, die eine Verbindung zwischen Frontend und Backend ermöglicht.                                   | 60 Minuten    |
-| 10   | -     | Lukas     | Sicherheitsmaßnahme für Passwörter: Implementierung einer sicheren Speicherung von Passwörtern, um Benutzerdaten zu schützen.            | 60 Minuten    |
+| 10   | -     | Lukas     | Sicherheitsmassnahme für Passwörter: Implementierung einer sicheren Speicherung von Passwörtern, um Benutzerdaten zu schützen.            | 60 Minuten    |
 | 11   | -     | Lukas     | Datenbank einrichten: Einrichtung einer Datenbank zur Speicherung von Benutzerdaten und Transaktionen.                                  | 60 Minuten    |
 | 12   | -     | Lukas     | Funktionstests: Durchführung von Tests, um sicherzustellen, dass Funktionen wie Registrierung und Geldsenden korrekt arbeiten.           | 60 Minuten    |
 | 13   | -     | Lukas     | Lastenmanagement: Optimierung der Anwendung, damit sie bei hoher Benutzerzahl nicht langsamer wird.                                      | 60 Minuten    |
