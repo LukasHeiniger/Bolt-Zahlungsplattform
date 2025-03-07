@@ -101,20 +101,25 @@ Ich habe realisiert, dass ich das nächste Mal die Planung besser gestalten soll
 
 | TC-№ | Datum    | Resultat        | Tester         |
 | ---- | -------- | --------------- | -------------- |
-| 1.1  | 25.10.24 | Funktioniert    | Lukas Heiniger |
-| 1.2  | 25.10.24 | Funktioniert    | Lukas Heiniger |
-| 1.3  | 25.10.24 | Nicht umgesetzt | Lukas Heiniger |
-| 1.4  | 25.10.24 | Funktioniert    | Lukas Heiniger |
-| 1.5  | 25.10.24 | Funktioniert    | Lukas Heiniger |
-| 1.6  | 25.10.24 | Nicht umgesetzt | Lukas Heiniger |
-| 1.7  | 25.10.24 | Nicht umgesetzt | Lukas Heiniger |
-| 1.8  | 25.10.24 | Funktioniert    | Lukas Heiniger |
-| 1.9  | 25.10.24 | Funktioniert    | Lukas Heiniger |
+| 1.1  | 07.03.25 | Funktioniert    | Lukas Heiniger |
+| 1.2  | 07.03.25 | Funktioniert    | Lukas Heiniger |
+| 1.3  | 07.03.25 | Nicht umgesetzt | Lukas Heiniger |
+| 1.4  | 07.03.25 | Funktioniert    | Lukas Heiniger |
+| 1.5  | 07.03.25 | Funktioniert    | Lukas Heiniger |
+| 1.6  | 07.03.25 | Nicht umgesetzt | Lukas Heiniger |
+| 1.7  | 07.03.25 | Nicht umgesetzt | Lukas Heiniger |
+| 1.8  | 07.03.25 | Funktioniert    | Lukas Heiniger |
+| 1.9  | 07.03.25 | Funktioniert    | Lukas Heiniger |
+| 1.10 | 07.03.25 | Funktioniert    | Lukas Heiniger |
+| 1.11 | 07.03.25 | Funktioniert    | Lukas Heiniger |
+| 1.12 | 07.03.25 | Funktioniert    | Lukas Heiniger |
+| 1.13 | 07.03.25 | Funktioniert    | Lukas Heiniger |
+| 1.14 | 07.03.25 | Funktioniert    | Lukas Heiniger |
+
 
 Fazit:
 
-Ich bin nicht wirklich zufrieden mit meinem Projekt, ich hätte mehr machen müssen, damit ich zufrieden gewesen wäre. Ich denke aber, dass das, was ich gemacht habe, ist einigermassen gut.
-
+Ich bin wirklich zufrieden mit meinem Projekt. Ich konnte einiges neues lernen.
 ## 6 Auswerten
 
 Link zum Portfoliobeitrag: https://portfolio.bbbaden.ch/view/view.php?t=0055a491798c7a14b92f
