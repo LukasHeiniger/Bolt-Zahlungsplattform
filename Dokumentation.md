@@ -38,7 +38,7 @@ Ich erstelle eine fiktive Zahlungsplattform wie Twint. Inhalt ist eine Frontend,
 | 3    | Der Benutzer hat sein Passwort vergessen.                      | Benutzer fordert Passwort zurücksetzen an und gibt seine E-Mail-Adresse ein. | Benutzer erhält eine E-Mail mit einem Link zur Passwortzurücksetzung.                                        |
 | 4    | Der Benutzer ist angemeldet und möchte einen anderen Benutzer finden. | Benutzer gibt den Namen des anderen Benutzers ein. | Der andere Benutzer wird erfolgreich gefunden und angezeigt.                                               |
 | 5    | Der Benutzer ist angemeldet und möchte eine Zahlung tätigen.   | Benutzer gibt den Betrag und den Empfänger an.   | Der Betrag wird erfolgreich an den Empfänger überwiesen und der Transaktionsstatus wird angezeigt.          |
-| 6    | Der Benutzer hat mehrere Transaktionen durchgeführt.           | Benutzer fordert die Anzeige seiner Transaktionshistorie an. | Die Transaktionshistorie wird korrekt angezeigt, einschließlich aller vergangenen Überweisungen.            |
+| 6    | Der Benutzer hat mehrere Transaktionen durchgeführt.           | Benutzer fordert die Anzeige seiner Transaktionshistorie an. | Die Transaktionshistorie wird korrekt angezeigt, einschliesslich aller vergangenen Überweisungen.            |
 | 7    | Der Benutzer öffnet die Anwendung.                             | Keine Eingabe.                                  | Die Benutzeroberfläche lädt und ist einfach und intuitiv zu bedienen.                                       |
 | 8    | Der Benutzer führt eine Transaktion durch.                     | Benutzer fügt eine Notiz zur Transaktion hinzu.   | Die Transaktion wird erfolgreich abgeschlossen und die Notiz wird angezeigt.                               |
 | 9    | Der Entwickler hat eine API erstellt.                          | Das Frontend sendet eine Anfrage an die API.     | Die API gibt eine korrekte Antwort zurück und ermöglicht die Kommunikation zwischen Frontend und Backend.    |
@@ -66,7 +66,7 @@ Ich erstelle eine fiktive Zahlungsplattform wie Twint. Inhalt ist eine Frontend,
 | 11   | -     | Lukas     | Datenbank einrichten: Einrichtung einer Datenbank zur Speicherung von Benutzerdaten und Transaktionen.                                  | 60 Minuten    |
 | 12   | -     | Lukas     | Funktionstests: Durchführung von Tests, um sicherzustellen, dass Funktionen wie Registrierung und Geldsenden korrekt arbeiten.           | 60 Minuten    |
 | 13   | -     | Lukas     | Lastenmanagement: Optimierung der Anwendung, damit sie bei hoher Benutzerzahl nicht langsamer wird.                                      | 60 Minuten    |
-| 14   | -     | Lukas     | Sicherheit der Benutzerkonten: Implementierung von Sicherheitsmaßnahmen, um sicherzustellen, dass nur berechtigte Benutzer Zugriff auf ihr Konto haben. | 60 Minuten    |
+| 14   | -     | Lukas     | Sicherheit der Benutzerkonten: Implementierung von Sicherheitsmassnahmen, um sicherzustellen, dass nur berechtigte Benutzer Zugriff auf ihr Konto haben. | 60 Minuten    |
 
 Total:
 
