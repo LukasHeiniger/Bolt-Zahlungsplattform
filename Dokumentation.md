@@ -8,7 +8,7 @@ Lukas Heiniger
 
 ### 1.1 Ihr Projekt
 
-Ich erstelle in diesem Projekt eine Webseite, über mich auf welcher man meine Projekte etc. sehen kann und auch noch informationen über mich.
+Ich erstelle eine fiktive Zahlungsplattform wie Twint. Inhalt ist eine Frontend, Backend und eine Datenbankstruktur.
 
 ### 1.2 User Stories
 
@@ -45,40 +45,22 @@ Ich erstelle in diesem Projekt eine Webseite, über mich auf welcher man meine P
 
 ## 2 Planen
 
-| AP-№ | Frist | Zuständig | Beschreibung                                                                                                                          | Geplante Zeit |
-| ---- | ----- | --------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| 1.A  |       | Lukas     | Registrierung-Seite erstellen: HTML-Formular für Eingabe von Benutzerdaten (z. B. Name, E-Mail, Passwort).                            | 60 min        |
-| 1.B  |       | Lukas     | Registrierung-Seite stylen: Einfache, benutzerfreundliche Gestaltung mit CSS.                                                         | 45 min        |
-| 2.A  |       | Lukas     | Anmeldeseite erstellen: HTML-Formular für Eingabe von E-Mail und Passwort.                                                            | 45 min        |
-| 2.B  |       | Lukas     | Anmeldeseite stylen: Einheitliches Design passend zur Registrierung-Seite.                                                            | 45 min        |
-| 3.A  |       | Lukas     | Startseite erstellen: Begrüßungstext und Navigation zu wichtigen Funktionen (z. B. Registrieren, Anmelden).                           | 60 min        |
-| 3.B  |       | Lukas     | Startseite stylen: Einheitliches Design mit responsivem Layout.                                                                       | 45 min        |
-| 4.A  |       | Lukas     | Benutzeroberfläche für Geld senden erstellen: Eingabefelder für Empfänger und Betrag.                                                 | 60 min        |
-| 4.B  |       | Lukas     | Gestaltung der Benutzeroberfläche für Geld senden: Klare und intuitive Darstellung.                                                   | 45 min        |
-| 5.A  |       | Lukas     | Seite für Transaktionshistorie erstellen: Anzeige von Datum, Empfänger und Betrag.                                                    | 60 min        |
-| 5.B  |       | Lukas     | Gestaltung der Transaktionshistorie: Übersichtliches und responsives Design.                                                          | 45 min        |
-| 6.A  |       | Lukas     | Benutzeroberfläche für Passwort-Zurücksetzen erstellen: Formular für neue Passwort-Eingabe.                                           | 60 min        |
-| 6.B  |       | Lukas     | Styling der Passwort-Zurücksetzen-Seite: Einheitliches Design.                                                                        | 45 min        |
-| 7.A  |       | Lukas     | Benachrichtigungsanzeige (z. B. Modal oder Banner) für erfolgreiche Überweisungen erstellen.                                          | 60 min        |
-| 8.A  |       | Lukas     | Navigationsleiste mit Links zu allen wichtigen Seiten erstellen und einbinden.                                                        | 60 min        |
-| 8.B  |       | Lukas     | Styling der Navigationsleiste: Responsive Darstellung und aktiver Link-Indikator.                                                     | 45 min        |
-| 9.A  |       | Lukas     | API-Endpoint für die Registrierung erstellen: Benutzer können ihre Daten speichern.                                                   | 90 min        |
-| 9.B  |       | Lukas     | API-Endpoint für die Anmeldung erstellen: Benutzer können sich mit E-Mail und Passwort anmelden.                                      | 90 min        |
-| 9.C  |       | Lukas     | API-Endpoint für das Zurücksetzen des Passworts erstellen: Benutzer können ihre Passwörter zurücksetzen.                              | 60 min        |
-| 10.A |       | Lukas     | API-Endpoint für das Senden von Geld erstellen: Ermöglicht es einem Benutzer, einen Betrag an einen anderen zu senden.                | 120 min       |
-| 10.B |       | Lukas     | API-Endpoint für die Transaktionshistorie erstellen: Gibt eine Liste der Transaktionen des Benutzers zurück.                          | 90 min        |
-| 11.A |       | Lukas     | Datenbankstruktur für Benutzer erstellen: Tabellen für Benutzer, E-Mail, Passwort und Transaktionen anlegen.                          | 90 min        |
-| 11.B |       | Lukas     | Datenbankstruktur für Transaktionen erstellen: Tabellen für gesendete Beträge, Empfänger, Datum und Status anlegen.                   | 90 min        |
-| 12.A |       | Lukas     | Transaktionslogik implementieren: Beim Senden von Geld wird die Transaktion in der Datenbank gespeichert.                             | 120 min       |
-| 13.A |       | Lukas     | Datenbankverbindung und -abfragen einrichten: Sicherstellen, dass das Frontend mit der Datenbank kommunizieren kann.                  | 90 min        |
-| 14.A |       | Lukas     | Validierung und Sicherheit für Transaktionen einbauen: Prüfen, ob der Benutzer genug Guthaben hat und ob der Empfänger existiert.     | 120 min       |
-| 15.A |       | Lukas     | API für Transaktionsstatus implementieren: Benutzer können den Status ihrer Überweisung abfragen.                                     | 90 min        |
-| 16.A |       | Lukas     | Authentifizierung für Transaktionen sicherstellen: Nur authentifizierte Benutzer können Transaktionen durchführen.                    | 90 min        |
-| 17.A |       | Lukas     | Fehlerbehandlung und Logging für Transaktionen einrichten: Bei Fehlern sollen informative Fehlernachrichten und Logs erstellt werden. | 90 min        |
-| 18.A |       | Lukas     | Testen aller API-Endpoints: Sicherstellen, dass die APIs wie erwartet funktionieren (Unit-Tests).                                     | 90 min        |
-| 19.A |       | Lukas     | Dokumentation der API und Datenbankstruktur: Beschreiben, wie man die API nutzt und welche Daten gespeichert werden.                  | 90 min        |
-| 20.A |       | Lukas     | Sicherstellen, dass die Anwendung skalierbar ist und viele Benutzer gleichzeitig die Anwendung nutzen können.                         | 120 min       |
-| 21.A |       | Lukas     | Sicherheit der Benutzerdaten und Transaktionen gewährleisten (z. B. HTTPS, sichere Passwörter).                                       | 90 min        |
+| AP-№ | Frist | Zuständig | Beschreibung                                                                                                                            | Geplante Zeit |
+| ---- | ----- | --------- | --------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| 1    | -     | -         | Entwicklung der Registrierungsfunktion: Implementierung der Möglichkeit für Benutzer, sich zu registrieren, um ein Konto zu erstellen.   | -             |
+| 2    | -     | -         | Entwicklung der Anmeldefunktion: Ermöglichen der Anmeldung, damit Benutzer Zugang zu ihrem Konto und ihren Transaktionen haben.        | -             |
+| 3    | -     | -         | Entwicklung der Passwort-zurücksetzen-Funktion: Implementierung einer Möglichkeit für Benutzer, ihr Passwort zurückzusetzen.            | -             |
+| 4    | -     | -         | Funktion zur Benutzersuche: Implementierung einer Funktion, mit der Benutzer andere finden und Geld senden können.                       | -             |
+| 5    | -     | -         | Überweisungsfunktion: Implementierung der Möglichkeit, einen Geldbetrag an andere Benutzer zu senden.                                   | -             |
+| 6    | -     | -         | Transaktionshistorie anzeigen: Ermöglichen der Einsichtnahme der Transaktionshistorie, damit Benutzer ihre vergangenen Überweisungen sehen können. | -             |
+| 7    | -     | -         | Benutzeroberfläche: Gestaltung einer einfachen und intuitiven Benutzeroberfläche, um eine benutzerfreundliche Anwendung zu gewährleisten.  | -             |
+| 8    | -     | -         | Notizfunktion für Transaktionen: Implementierung der Möglichkeit, Transaktionen mit einer Notiz zu versehen, um den Überweisungsgrund anzugeben. | -             |
+| 9    | -     | -         | API-Entwicklung: Erstellung einer API, die eine Verbindung zwischen Frontend und Backend ermöglicht.                                   | -             |
+| 10   | -     | -         | Sicherheitsmaßnahme für Passwörter: Implementierung einer sicheren Speicherung von Passwörtern, um Benutzerdaten zu schützen.            | -             |
+| 11   | -     | -         | Datenbank einrichten: Einrichtung einer Datenbank zur Speicherung von Benutzerdaten und Transaktionen.                                  | -             |
+| 12   | -     | -         | Funktionstests: Durchführung von Tests, um sicherzustellen, dass Funktionen wie Registrierung und Geldsenden korrekt arbeiten.           | -             |
+| 13   | -     | -         | Lastenmanagement: Optimierung der Anwendung, damit sie bei hoher Benutzerzahl nicht langsamer wird.                                      | -             |
+| 14   | -     | -         | Sicherheit der Benutzerkonten: Implementierung von Sicherheitsmaßnahmen, um sicherzustellen, dass nur berechtigte Benutzer Zugriff auf ihr Konto haben. | -             |
 
 Total:
 
