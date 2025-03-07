@@ -47,20 +47,20 @@ Ich erstelle eine fiktive Zahlungsplattform wie Twint. Inhalt ist eine Frontend,
 
 | AP-№ | Frist | Zuständig | Beschreibung                                                                                                                            | Geplante Zeit |
 | ---- | ----- | --------- | --------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| 1    | -     | -         | Entwicklung der Registrierungsfunktion: Implementierung der Möglichkeit für Benutzer, sich zu registrieren, um ein Konto zu erstellen.   | -             |
-| 2    | -     | -         | Entwicklung der Anmeldefunktion: Ermöglichen der Anmeldung, damit Benutzer Zugang zu ihrem Konto und ihren Transaktionen haben.        | -             |
-| 3    | -     | -         | Entwicklung der Passwort-zurücksetzen-Funktion: Implementierung einer Möglichkeit für Benutzer, ihr Passwort zurückzusetzen.            | -             |
-| 4    | -     | -         | Funktion zur Benutzersuche: Implementierung einer Funktion, mit der Benutzer andere finden und Geld senden können.                       | -             |
-| 5    | -     | -         | Überweisungsfunktion: Implementierung der Möglichkeit, einen Geldbetrag an andere Benutzer zu senden.                                   | -             |
-| 6    | -     | -         | Transaktionshistorie anzeigen: Ermöglichen der Einsichtnahme der Transaktionshistorie, damit Benutzer ihre vergangenen Überweisungen sehen können. | -             |
-| 7    | -     | -         | Benutzeroberfläche: Gestaltung einer einfachen und intuitiven Benutzeroberfläche, um eine benutzerfreundliche Anwendung zu gewährleisten.  | -             |
-| 8    | -     | -         | Notizfunktion für Transaktionen: Implementierung der Möglichkeit, Transaktionen mit einer Notiz zu versehen, um den Überweisungsgrund anzugeben. | -             |
-| 9    | -     | -         | API-Entwicklung: Erstellung einer API, die eine Verbindung zwischen Frontend und Backend ermöglicht.                                   | -             |
-| 10   | -     | -         | Sicherheitsmaßnahme für Passwörter: Implementierung einer sicheren Speicherung von Passwörtern, um Benutzerdaten zu schützen.            | -             |
-| 11   | -     | -         | Datenbank einrichten: Einrichtung einer Datenbank zur Speicherung von Benutzerdaten und Transaktionen.                                  | -             |
-| 12   | -     | -         | Funktionstests: Durchführung von Tests, um sicherzustellen, dass Funktionen wie Registrierung und Geldsenden korrekt arbeiten.           | -             |
-| 13   | -     | -         | Lastenmanagement: Optimierung der Anwendung, damit sie bei hoher Benutzerzahl nicht langsamer wird.                                      | -             |
-| 14   | -     | -         | Sicherheit der Benutzerkonten: Implementierung von Sicherheitsmaßnahmen, um sicherzustellen, dass nur berechtigte Benutzer Zugriff auf ihr Konto haben. | -             |
+| 1    | -     | Lukas     | Entwicklung der Registrierungsfunktion: Implementierung der Möglichkeit für Benutzer, sich zu registrieren, um ein Konto zu erstellen.   | 60 Minuten    |
+| 2    | -     | Lukas     | Entwicklung der Anmeldefunktion: Ermöglichen der Anmeldung, damit Benutzer Zugang zu ihrem Konto und ihren Transaktionen haben.        | 60 Minuten    |
+| 3    | -     | Lukas     | Entwicklung der Passwort-zurücksetzen-Funktion: Implementierung einer Möglichkeit für Benutzer, ihr Passwort zurückzusetzen.            | 60 Minuten    |
+| 4    | -     | Lukas     | Funktion zur Benutzersuche: Implementierung einer Funktion, mit der Benutzer andere finden und Geld senden können.                       | 60 Minuten    |
+| 5    | -     | Lukas     | Überweisungsfunktion: Implementierung der Möglichkeit, einen Geldbetrag an andere Benutzer zu senden.                                   | 60 Minuten    |
+| 6    | -     | Lukas     | Transaktionshistorie anzeigen: Ermöglichen der Einsichtnahme der Transaktionshistorie, damit Benutzer ihre vergangenen Überweisungen sehen können. | 60 Minuten    |
+| 7    | -     | Lukas     | Benutzeroberfläche: Gestaltung einer einfachen und intuitiven Benutzeroberfläche, um eine benutzerfreundliche Anwendung zu gewährleisten.  | 60 Minuten    |
+| 8    | -     | Lukas     | Notizfunktion für Transaktionen: Implementierung der Möglichkeit, Transaktionen mit einer Notiz zu versehen, um den Überweisungsgrund anzugeben. | 60 Minuten    |
+| 9    | -     | Lukas     | API-Entwicklung: Erstellung einer API, die eine Verbindung zwischen Frontend und Backend ermöglicht.                                   | 60 Minuten    |
+| 10   | -     | Lukas     | Sicherheitsmaßnahme für Passwörter: Implementierung einer sicheren Speicherung von Passwörtern, um Benutzerdaten zu schützen.            | 60 Minuten    |
+| 11   | -     | Lukas     | Datenbank einrichten: Einrichtung einer Datenbank zur Speicherung von Benutzerdaten und Transaktionen.                                  | 60 Minuten    |
+| 12   | -     | Lukas     | Funktionstests: Durchführung von Tests, um sicherzustellen, dass Funktionen wie Registrierung und Geldsenden korrekt arbeiten.           | 60 Minuten    |
+| 13   | -     | Lukas     | Lastenmanagement: Optimierung der Anwendung, damit sie bei hoher Benutzerzahl nicht langsamer wird.                                      | 60 Minuten    |
+| 14   | -     | Lukas     | Sicherheit der Benutzerkonten: Implementierung von Sicherheitsmaßnahmen, um sicherzustellen, dass nur berechtigte Benutzer Zugriff auf ihr Konto haben. | 60 Minuten    |
 
 Total:
 
