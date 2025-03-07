@@ -76,29 +76,24 @@ Ich habe realisiert, dass ich das nächste Mal die Planung besser gestalten soll
 
 ## 4 Realisieren
 
+## 4 Realisieren
+
 | AP-№ | Datum                  | Zuständig | geplante Zeit        | tatsächliche Zeit |
 | ---- | ---------------------- | --------- | -------------------- | ----------------- |
-| 1.A  | 30.08.24               | Lukas     | 45 min               | 45 min            |
-| 1.B  | 30.08.24               | Lukas     | 45 min               | 45 min            |
-| 2.A  | 30.08.24               | Lukas     | 45 min               | 45 min            |
-| 2.B  | 30.08.24               | Lukas     | 45 min               | 45 min            |
-| 2.C  | 30.08.24               | Lukas     | 45 min               | 45 min            |
-| 3.A  | 06.09.24               | Lukas     | 45 min               | 45 min            |
-| 4.A  | 06.09.24               | Lukas     | 45 min               | 45 min            |
-| 5.A  | 06.09.24               | Lukas     | 45 min               | 45 min            |
-| 7.A  |                        | Lukas     | 45 min               | Nicht umgesetzt   |
-| 8.A  | 13.09.24               | Lukas     | 45 min               | 45 min            |
-| 9.A  | 13.09.24               | Lukas     | 45 min               | 45 min            |
-| 10.A | 13.09.24               | Lukas     | 45 min               | 45 min            |
-| 11.A | 14.10.24               | Lukas     | 45 min               | 45 min            |
-| 12.A | 14.10.24               | Lukas     | 45 min               | 45 min            |
-| 13.A |                        | Lukas     | 45 min               | Nicht umgesetzt   |
-| 14.A | 14.10.24               | Lukas     | 45 min               | 45 min            |
-| 15.A |                        | Lukas     | 45 min               | Nicht umesetzt    |
-| 16.A | 25.10.24               | Lukas     | 45 min               | 45 min            |
-| 16.B | 25.10.24               | Lukas     | 45 min               | 45 min            |
-| 17.A | 25.10.24 Abgeschlossen | Lukas     | Projektdokumentation | 2 Lektionen       |
-| 17.B | 25.10.24               | Lukas     | Portfoliobeitrag     | 3 lektionen       |
+| 1    | 17.01                      | Lukas     | 60 Minuten           | 90 Minuten        |
+| 2    |17.01                        | Lukas     | 60 Minuten           | 75 Minuten        |
+| 3    | 24.01                      | Lukas     | 60 Minuten           | Nicht erledigt    |
+| 4    | 24.01                      | Lukas     | 60 Minuten           | 80 Minuten        |
+| 5    | 24.01                      | Lukas     | 60 Minuten           | 85 Minuten        |
+| 6    | 14.02                      | Lukas     | 60 Minuten           | 70 Minuten        |
+| 7    | 14.02                       | Lukas     | 60 Minuten           | 100 Minuten       |
+| 8    | 14.02                       | Lukas     | 60 Minuten           | Nicht erledigt    |
+| 9    | 20.02                      | Lukas     | 60 Minuten           | 120 Minuten       |
+| 10   | 20.02                       | Lukas     | 60 Minuten           | 90 Minuten        |
+| 11   | 28.02                      | Lukas     | 60 Minuten           | 95 Minuten        |
+| 12   | 07.03                      | Lukas     | 60 Minuten           | 110 Minuten       |
+| 13   | 07.03                      | Lukas     | 60 Minuten           | 130 Minuten       |
+
 
 ## 5 Kontrollieren
 
