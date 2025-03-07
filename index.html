@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BoltAPI - Benutzerverwaltung</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bolt Bank</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Bolt Bank - User Dashboard</h1>
 
-    <!-- Benutzerinfos -->
-    <div id="userInfo" style="display: none;">
-        <h3>Willkommen, <span id="userDetails"></span></h3>
-        <p id="userBalance"></p>
-        <button onclick="searchUser()">Benutzer suchen</button>
+    <div id="register">
+      <h2>Registrieren</h2>
+      <input type="text" id="regUsername" placeholder="Benutzername" />
+      <input type="password" id="regPassword" placeholder="Passwort" />
+      <button onclick="registerUser()">Registrieren</button>
     </div>
 
-    <!-- Login-Formular -->
-    <div id="loginForm">
-        <h2>Login</h2>
-        <input type="text" id="loginUsername" placeholder="Benutzername" />
-        <input type="password" id="loginPassword" placeholder="Passwort" />
-        <button onclick="loginUser()">Login</button>
+    <div id="login">
+      <h2>Login</h2>
+      <input type="text" id="loginUsername" placeholder="Benutzername" />
+      <input type="password" id="loginPassword" placeholder="Passwort" />
+      <button onclick="login()">Einloggen</button>
     </div>
 
-    <!-- Registrierungsformular -->
-    <div id="registerForm">
-        <h2>Registrieren</h2>
-        <input type="text" id="registerUsername" placeholder="Benutzername" />
-        <input type="password" id="registerPassword" placeholder="Passwort" />
-        <button onclick="registerUser()">Registrieren</button>
-    </div>
+    <div id="dashboard" style="display: none">
+      <h2>Willkommen, <span id="loggedInUser"></span></h2>
+      <p>Dein Guthaben: <span id="userBalance">0</span> €</p>
+      <button onclick="logout()">Ausloggen</button>
 
-    <!-- Überweisungsformular -->
-    <div id="transferForm">
-        <h2>Geld überweisen</h2>
-        <input type="text" id="receiverInput" placeholder="Benutzername oder ID des Empfängers" />
-        <input type="number" id="transferAmount" placeholder="Betrag" />
-        <button onclick="transferMoney()">Überweisen</button>
+      <h3>Benutzer suchen</h3>
+      <input type="text" id="searchQuery" placeholder="Name oder ID" />
+      <button onclick="searchUsers()">Suchen</button>
+      <ul id="userList"></ul>
+
+      <h3>Geld überweisen</h3>
+      <input type="number" id="receiverId" placeholder="Empfänger-ID" />
+      <input type="number" id="transferAmount" placeholder="Betrag" />
+      <button onclick="transferMoney()">Überweisen</button>
+
+      <h3>Transaktions-History</h3>
+      <button onclick="loadTransactionHistory()">History anzeigen</button>
+      <ul id="transactionHistory"></ul>
     </div>
 
     <script src="app.js"></script>
-</body>
+  </body>
 </html>

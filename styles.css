@@ -1,100 +1,107 @@
 /* Allgemeine Einstellungen */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 h2 {
-    color: #4CAF50;
+  color: #4caf50;
 }
 
-h3, p {
-    color: #555;
+h3,
+p {
+  color: #555;
 }
 
-input[type="text"], input[type="password"], input[type="number"] {
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 250px;
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 250px;
 }
 
 button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
 }
 
 button:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
 
 /* Container für Benutzerinfo */
 #userInfo {
-    margin-bottom: 20px;
-    text-align: center;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 #userInfo button {
-    background-color: #2196F3;
+  background-color: #2196f3;
 }
 
-#loginForm, #registerForm, #transferForm {
-    width: 300px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+#loginForm,
+#registerForm,
+#transferForm {
+  width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
-#loginForm h2, #registerForm h2, #transferForm h2 {
-    text-align: center;
-    margin-bottom: 20px;
+#loginForm h2,
+#registerForm h2,
+#transferForm h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 h2 {
-    color: #4CAF50;
+  color: #4caf50;
 }
 
 /* Styling für den Button im Benutzerinfo-Bereich */
 #userInfo button {
-    background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 #userInfo button:hover {
-    background-color: #1976D2;
+  background-color: #1976d2;
 }
 
 #userBalance {
-    font-weight: bold;
-    margin-top: 10px;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 input::placeholder {
-    color: #aaa;
+  color: #aaa;
 }
 
 input[type="number"] {
-    -moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
