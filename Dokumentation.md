@@ -74,7 +74,7 @@ Total:
 
 Ich habe realisiert, dass ich das nächste Mal die Planung besser gestalten soll.
 
-## 4 Realisieren
+
 
 ## 4 Realisieren
 
