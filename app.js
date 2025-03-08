@@ -34,7 +34,7 @@ async function login() {
     const data = await response.json();
     currentUser = data;
 
-    // Hier wird überprüft, ob die ID und andere Daten korrekt zurückgegeben werden
+    
     if (currentUser && currentUser.id) {
       localStorage.setItem("jwtToken", data.token); // JWT speichern
       document.getElementById("loggedInUser").innerText = currentUser.username;
