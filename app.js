@@ -1,4 +1,4 @@
-const apiUrl = "https://localhost:7102/api/User"; // Anpassen falls Port anders
+const apiUrl = "https://localhost:7102/api/User"; 
 
 let currentUser = null;
 
